@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-
 function App() {
+  const [actresses, setActresses] = useState([])
   const [actors, setActors] = useState([]);
 
+
   useEffect(() => {
+
     const url = "https://lanciweb.github.io/demo/api/actors/";
 
     fetch(url)
