@@ -21,6 +21,7 @@ function App() {
 
     axios.get("https://lanciweb.github.io/demo/api/actresses/").then((response) => {
       setActresses(response.data);
+      console.log("Lista attrici", response.data)
 
     }).catch((error) => {
       console.error("Errore nel recupero delle attrici:", error);
