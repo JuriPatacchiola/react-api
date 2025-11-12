@@ -43,7 +43,22 @@ function App() {
             </div>
           ))}
         </div>
+      </div>
 
+      <div className="container2">
+        <h1>Attrici</h1>
+        <div className="card-container">
+          {actresses.map((actress) => (
+            <div key={actress.name} className="card">
+              <img src={actress.image} alt={actress.name} className="card-image" />
+              <h3>{actress.name}</h3>
+              <p><strong>Nato:</strong> {actress.birth_year}</p>
+              <p><strong>Nazionalità:</strong> {actress.nationality}</p>
+              <p>{actress.bio}</p>
+              <p><strong>Riconoscimenti:</strong> {actress.awards}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
     </>
