@@ -47,6 +47,7 @@ function App() {
               <p><strong>Nazionalità:</strong> {actor.nationality}</p>
               <p>{actor.bio}</p>
               <p><strong>Riconoscimenti:</strong> {actor.awards}</p>
+              <p><strong>FIlm più famosi:</strong> {actor.known_for}</p>
             </div>
           ))}
         </div>
@@ -63,6 +64,7 @@ function App() {
               <p><strong>Nazionalità:</strong> {actress.nationality}</p>
               <p>{actress.bio}</p>
               <p><strong>Riconoscimenti:</strong> {actress.awards}</p>
+              <p><strong>FIlm più famosi:</strong> {actress.most_famous_movies}</p>
             </div>
           ))}
         </div>
