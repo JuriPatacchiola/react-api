@@ -19,17 +19,23 @@ function App() {
 
   return (
     <>
-      <h1>Attori</h1>
-      {actors.map((actor) => (
-        <div key={actor.name}>
-          <img src={actor.image} alt={actor.name} />
-          <h3>{actor.name}</h3>
-          <p><strong>Nato:</strong> {actor.birth_year}</p>
-          <p><strong>Nazionalità:</strong> {actor.nationality}</p>
-          <p>{actor.bio}</p>
-          <p><strong>Riconoscimenti:</strong> {actor.awards}</p>
+      <div className="container">
+        <h1>Attori</h1>
+        <div className="card-container">
+          {actors.map((actor) => (
+            <div key={actor.name} className="card">
+              <img src={actor.image} alt={actor.name} className="card-image" />
+              <h3>{actor.name}</h3>
+              <p><strong>Nato:</strong> {actor.birth_year}</p>
+              <p><strong>Nazionalità:</strong> {actor.nationality}</p>
+              <p>{actor.bio}</p>
+              <p><strong>Riconoscimenti:</strong> {actor.awards}</p>
+            </div>
+          ))}
         </div>
-      ))}
+
+      </div>
+
     </>
   )
 }
