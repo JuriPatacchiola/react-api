@@ -29,8 +29,10 @@ function App() {
   }, []);
 
   useEffect(() => {
-
-  })
+    if (actors.length > 0 && actresses.length > 0) {
+      console.log("Attori + Attrici ", [...actors, ...actresses])
+    }
+  }, [actors, actresses]);
 
   return (
     <>
