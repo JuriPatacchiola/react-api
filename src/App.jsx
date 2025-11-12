@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 function App() {
   const [actresses, setActresses] = useState([])
@@ -17,6 +18,13 @@ function App() {
       .catch((error) => {
         console.error("Errore nel recupero dei dati:", error);
       });
+
+    axios.get("https://lanciweb.github.io/demo/api/actresses/").then((response) => {
+      setActresses(response.data);
+
+    }).catch((error) => {
+      console.error("Errore nel recupero delle attrici:", error);
+    });
   }, []);
 
   return (
